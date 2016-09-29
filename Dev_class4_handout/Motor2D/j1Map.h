@@ -17,9 +17,26 @@ struct TileSet {
 	uint tileheigth;
 	uint spacing;
 	uint margin;
+
 };
 
 // TODO 1: Create a struct needed to hold the information to Map node
+struct MapLayer {
+	char* name;
+	uint width;
+	uint height;
+	struct Data {
+		uint* tiles;
+	}data;
+
+	~MapLayer() {
+		name = nullptr;
+		width = NULL;
+		height = NULL;
+		data.tiles = nullptr;
+	}
+
+};
 
 enum Orientation { Orthogonal = 0, Isometric, Isometric_staggered, Hexagonal_staggered };
 enum RenderOrder { Right_down = 0, Right_up, Left_down, Left_up };
@@ -67,6 +84,8 @@ public:
 	// TODO 1: Add your struct for map info as public for now
 	MapNode map_node;
 	p2DynArray<TileSet> tilesets;
+
+	p2DynArray<MapLayer> map_layers;
 	
 	SDL_Texture* Map1_texture = nullptr;
 

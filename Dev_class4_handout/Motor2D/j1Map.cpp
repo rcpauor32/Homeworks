@@ -48,6 +48,8 @@ bool j1Map::CleanUp()
 	// TODO 2: Make sure you clean up any memory allocated
 	// from tilesets / map
 
+	map_layers.Clear();
+
 	// Remove all tilesets
 	tilesets.Clear();
 
