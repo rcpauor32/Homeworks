@@ -123,9 +123,9 @@ bool j1Map::LoadMapNode()
 	}
 
 	map_node.width = map_file.child("map").attribute("width").as_int();
-	map_node.heigth = map_file.child("map").attribute("heigth").as_int();
+	map_node.heigth = map_file.child("map").attribute("height").as_int();
 	map_node.tilewidth = map_file.child("map").attribute("tilewidth").as_int();
-	map_node.tileheigth = map_file.child("map").attribute("tileheigth").as_int();
+	map_node.tileheigth = map_file.child("map").attribute("tileheight").as_int();
 	map_node.nextobjectid = map_file.child("map").attribute("nextobjectid").as_int();
 
 	Map1_texture = App->tex->Load("maps/tmw_desert_spacing.png");

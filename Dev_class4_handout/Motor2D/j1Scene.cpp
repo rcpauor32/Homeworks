@@ -71,7 +71,7 @@ bool j1Scene::Update(float dt)
 
 	//App->win->SetTitle(title.GetString());
 
-	p2SString newTitle("Map:%dx%d Tiles:%dx%d Tilesets:%d", App->map->map_node.width, App->map->map_node.heigth, App->map->map_node.tilewidth, App->map->map_node.heigth, App->map->tilesets.Count());
+	p2SString newTitle("Map:%dx%d Tiles:%dx%d Tilesets:%d", App->map->map_node.width, App->map->map_node.heigth, App->map->map_node.tilewidth, App->map->map_node.tileheigth, App->map->tilesets.Count());
 
 	App->win->SetTitle(newTitle.GetString());
 
